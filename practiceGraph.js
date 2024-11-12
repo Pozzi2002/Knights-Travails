@@ -17,8 +17,15 @@ class Graph {
         return this.adjacencyList.get(node1).has(node2)
     }
 }
+function createBoard() {
+    for (let i = 0; i <= 8; i++) {
+      for (let j = 0; j <= 8; j++) {
+          graph.addNode(`${i}-${j}`)
+      }
+    }
+}
+
 let graph = new Graph;
-graph.addNode(12)
-graph.addNode(13)
-graph.addEdge(12, 13)
+createBoard()
+graph.addEdge("0-0", "2-1")
 console.log(graph)
